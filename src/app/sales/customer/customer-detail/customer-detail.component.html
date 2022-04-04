@@ -2,27 +2,30 @@
 <div>
     <span id="pageTitle">Customer Detail</span>
 </div>
-<table class="table table-sm">
-    <tr>
-        <th>Id:</th>
-        <td><input [(ngModel)]="customer.id" type="number" readonly></td>
-    </tr>
-    <tr>
-        <th>Name:</th>
-        <td><input [(ngModel)]="customer.name" type="text" readonly></td>
-    </tr>
-    <tr>
-        <th>State:</th>
-        <td><input [(ngModel)]="customer.stateCode" type="text" readonly></td>
-    </tr>
-    <tr>
-        <th>Sales:</th>
-        <td><input [(ngModel)]="customer.sales" type="currency" readonly></td>
-    </tr>
-    <tr>
-        <th>Active:</th>
-        <td><input [(ngModel)]="customer.active" type="checkbox" disabled></td>
-    </tr>
+<table *ngIf="customer" class="table table-striped table-sm">
+    <tbody>
+
+        <tr>
+            <th>Id:</th>
+            <td><input [(ngModel)]="customer.id" type="number" chars="7" readonly></td>
+        </tr>
+        <tr>
+            <th>Name:</th>
+            <td><input [(ngModel)]="customer.name" type="text" readonly></td>
+        </tr>
+        <tr>
+            <th>State:</th>
+            <td><input [(ngModel)]="customer.stateCode" type="text" readonly></td>
+        </tr>
+        <tr>
+            <th>Sales:</th>
+            <td><input [(ngModel)]="customer.sales" type="currency" readonly></td>
+        </tr>
+        <tr>
+            <th>Active:</th>
+            <td><input [(ngModel)]="customer.active" type="checkbox" disabled></td>
+        </tr>
+    </tbody>
 </table>
 <div>
     <button (click)="remove()" class="btn btn-danger">Delete</button>
