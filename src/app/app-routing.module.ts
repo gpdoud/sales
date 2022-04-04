@@ -8,6 +8,11 @@ import { CustomerDetailComponent } from './sales/customer/customer-detail/custom
 import { CustomerEditComponent } from './sales/customer/customer-edit/customer-edit.component';
 import { CustomerListComponent } from './sales/customer/customer-list/customer-list.component';
 
+import { OrderCreateComponent } from './sales/order/order-create/order-create.component';
+import { OrderDetailComponent } from './sales/order/order-detail/order-detail.component';
+import { OrderEditComponent } from './sales/order/order-edit/order-edit.component';
+import { OrderListComponent } from './sales/order/order-list/order-list.component';
+
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
@@ -17,6 +22,11 @@ const routes: Routes = [
   { path: "customer/create", component: CustomerCreateComponent },
   { path: "customer/detail/:id", component: CustomerDetailComponent },
   { path: "customer/edit/:id", component: CustomerEditComponent },
+
+  { path: "order/list", component: OrderListComponent },
+  { path: "order/create", component: OrderCreateComponent },
+  { path: "order/detail/:id", component: OrderDetailComponent },
+  { path: "order/edit/:id", component: OrderEditComponent },
 
   { path: "**", component: E404Component }
 ];
