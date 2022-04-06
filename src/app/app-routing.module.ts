@@ -13,6 +13,9 @@ import { OrderDetailComponent } from './sales/order/order-detail/order-detail.co
 import { OrderEditComponent } from './sales/order/order-edit/order-edit.component';
 import { OrderListComponent } from './sales/order/order-list/order-list.component';
 
+import { EmployeeLoginComponent } from './sales/employee/employee-login/employee-login.component';
+import { OrderLineComponent } from './sales/order/order-line/order-line.component';
+
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
@@ -27,6 +30,9 @@ const routes: Routes = [
   { path: "order/create", component: OrderCreateComponent },
   { path: "order/detail/:id", component: OrderDetailComponent },
   { path: "order/edit/:id", component: OrderEditComponent },
+  { path: "order/line/:id", component: OrderLineComponent },
+
+  { path: "login", component: EmployeeLoginComponent },
 
   { path: "**", component: E404Component }
 ];

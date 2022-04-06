@@ -19,6 +19,8 @@ import { OrderCreateComponent } from './sales/order/order-create/order-create.co
 import { OrderEditComponent } from './sales/order/order-edit/order-edit.component';
 import { BoolDisplayPipe } from './bool-display.pipe';
 import { CustomerSearchPipe } from './sales/customer/customer-search.pipe';
+import { EmployeeLoginComponent } from './sales/employee/employee-login/employee-login.component';
+import { OrderLineComponent } from './sales/order/order-line/order-line.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { CustomerSearchPipe } from './sales/customer/customer-search.pipe';
     OrderCreateComponent,
     OrderEditComponent,
     BoolDisplayPipe,
-    CustomerSearchPipe
+    CustomerSearchPipe,
+    EmployeeLoginComponent,
+    OrderLineComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
